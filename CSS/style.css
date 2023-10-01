@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Tiro+Devanagari+Marathi&display=swap');
+
+:root{
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:1rem solid rgba(0,0,0,.1);
+    --outline-hover:2rem solid var(--black);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    /* font-size: 62.5%; */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background-color: rgb(184, 248, 177);
+}
+
+/* section start */
+section{
+    padding: 2rem 9%;
+}
+/* section end */
+
+/* Header start */
+.header{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index:1000;
+    background-color: black;
+    color: white;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+/* Navbar start */
+.navbar ul{
+    background-color:black;
+    color: white;
+    font-size: 1.1rem;
+    /* margin-top: 8%; */
+    display: inline-flex;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    /* font-family: 'Tiro Devanagari Marathi', serif; */
+}
+
+.navbar ul li{
+    width: 7.5rem;
+    margin-top: 0.938rem;
+    padding: 0.938rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li:hover
+{
+    background-color: rgb(168, 163, 163);
+    border-radius: 0.188rem;
+    height: 3.25rem;
+}
+
+.dropdown_aarti{
+    display: none;
+}
+
+.navbar ul li:hover .dropdown_aarti{
+    display:block;
+    position:absolute;
+    background-color: black;
+    color: white;
+    margin-top: 0.938rem;
+    margin-left: -0.938rem;
+}
+
+.navbar ul li:hover .dropdown_aarti ul{
+    display: block;
+    margin: 0.625rem;
+}
+
+.navbar ul li:hover .dropdown_aarti ul li{
+    width: 9.375rem;
+    padding: 0.625rem;
+    border-bottom: 0.125rem solid rgb(220, 215, 215);
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.navbar ul li:hover .dropdown_aarti ul li:last-child{
+    border-bottom: none;
+}
+
+.navbar ul li:hover .dropdown_aarti ul li a:hover{
+    color: var(--orange);
+}
+/* navbar ends */
+
+/* icons start */
+.header .icons div{
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 3.5rem;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    margin-left: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header .icons div:hover{
+    background:#ff7800;
+    color: white;
+} 
+
+#menu-btn{
+    display:none;
+}
+/* icons end */
+
+/* Login form start */
+.login-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: 5rem;
+    color: black;
+    background: white;
+    text-align: center;
+}
+
+.login-form.active{
+    right:2rem;
+    transition:.4s initial;
+}
+
+.login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.login-form .box{
+    /* width: 100%; */
+    margin: 4px;
+    background: #eee;
+    border-radius: .2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color: white;
+}
+
+.login-form p{
+    font-size: 1.1rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.login-form p a{
+    color: var(--orange);
+    text-decoration: underline;
+}
+/* login form end */
+/* Header end */
+
+/* home section start */
+/* cover image start */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../Images/Happy_family.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 5rem;
+    padding-top: 20rem;
+    padding-bottom: 6.5rem;
+}
+/* cover image end */
+
+/* Ganpati image start */
+.gan{
+    position: absolute;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    margin-top: 21rem;
+}
+/* Ganpati image end */
+
+/* Left written start */
+.content{
+    position: absolute;
+    width: 47rem;
+    height: 13rem;
+    margin-top: 32rem;
+    left: 0;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    background-color:rgba(5, 97, 74, 0.2);
+    animation:slidecontent .9s ease-in ;
+}
+
+.tagline{
+    position: relative;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 1px 1px 2px red, 0 0 1em var(--orange), 0 0 0.2em blue;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    
+}
+
+.tagline span{
+    color: var(--orange);
+}
+
+@keyframes slidecontent{
+    0%{
+        transform: skewX(12deg) translateX(-500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+}
+/* Left written end */
+
+/* right logo start */
+.saiganeshlogo{
+    position: absolute;
+    margin-top: 32rem;
+    right: 15rem;
+    animation:slidelogo .9s ease-in ;
+}
+
+.saiganeshlogo img{
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes slidelogo{
+    0%{
+        transform: skewX(12deg) translateX(500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+}
+/* Right logo end */
+
+/* mama photo start */
+.about .mamaphoto{
+    position: absolute;
+    margin-top: 18rem;
+    left: 15rem;
+    animation:slidemama .9s ease-in ;
+}
+
+.mamaphoto img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 12rem;
+}
+
+@keyframes slidemama{
+    0%{
+        transform: skewX(12deg) translateX(-500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+}
+/* mama photo end */
+
+/* mama info start */
+.mamainfo{
+    position: absolute;
+    width: 50rem;
+    height: 17rem;
+    margin-top: 22rem;
+    padding: 2rem;
+    right: 0;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    background-color:rgb(11, 231, 176, 0.3);
+    animation:slidemamainfo .9s ease-in ;
+}
+
+.a .b .c{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%)  
+}
+.a{
+    font-size: 2.5rem; 
+    color: rgb(30, 0, 255);
+}
+.b{
+    font-size: 3.5rem; 
+    color: var(--orange);
+    font-weight: bold;
+}
+.c{
+    font-size: 1.5rem; 
+    color: rgb(30, 0, 255);
+}
+
+@keyframes slidemamainfo{
+    0%{
+        transform: skewX(12deg) translateX(-500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+}
+
+.work{
+    margin-top: 40rem;
+}
+.heading{
+    margin-top: 2rem;
+    background: var(--orange);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 4rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.work__grid {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.work__card {
+    max-width: 100%; /* Set the maximum width to occupy the full width of the grid cell */
+    margin: auto;
+    text-align: center; /* Center-align card content */
+    padding: 1rem; /* Add padding for spacing */
+    /* border: px solid #06500b; Add borders for a box-like appearance */
+    box-shadow:
+        0 0 10px 5px rgba(0, 0, 0, 0.2), /* Increased spread radius */
+        0 4px 6px 2px rgba(0, 0, 0, 0.1), /* Increased spread radius */
+        0 8px 12px 4px rgba(0, 0, 0, 0.1); /* Increased spread radius */
+    background-color: white;
+}
+
+.work__image {
+    position: relative;
+    overflow: hidden; /* Hide any image overflow */
+}
+
+.work__image img {
+    width: 100%; /* Make sure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.work__card__content {
+    padding: 1rem; /* Add padding for spacing */
+}
+
+.work__card__content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Reduce the font size for better fit */
+    font-weight: 800;
+}
+
+.work__image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Change height to 100% */
+    left: 0;
+    top: 0; /* Change bottom to top */
+    background-image: linear-gradient(to top, rgba(0, 0, 255, 0.3), transparent); /* Use rgba for gradient color */
+}
+
+.work__card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+}
+
+/* work end */
+
+
+/* Request on whatsapp start */
+
+.request {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .req-btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+  }
+  
+  .req-btn:hover{
+    background: var(--orange);
+    color: white;
+}
+  /* Request on whatsapp end */
+  
+
+/* About page */
+/* mama photo start */
+.mamadetails .mamaphoto{
+    position: absolute;
+    margin-top: 10rem;
+    left: 15rem;
+    animation:slidemama .9s ease-in ;
+}
+
+.mamaphoto img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 12rem;
+}
+
+@keyframes slidemama{
+    0%{
+        transform: skewX(12deg) translateX(-500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+}
+/* mama photo end */
+
+/* mama info start */
+.mamadetails .mamainfo{
+    position: absolute;
+    width: 50rem;
+    height: 17rem;
+    margin-top: 11rem;
+    padding: 2rem;
+    right: 0;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    background-color:rgb(11, 231, 176, 0.3);
+    animation:slidemamainfo .9s ease-in ;
+}
+
+.a .b .c{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%)  
+}
+.a{
+    font-size: 2.5rem; 
+    color: rgb(30, 0, 255);
+}
+.b{
+    font-size: 3.5rem; 
+    color: var(--orange);
+    font-weight: bold;
+}
+.c{
+    font-size: 1.5rem; 
+    color: rgb(30, 0, 255);
+}
+
+@keyframes slidemamainfo{
+    0%{
+        transform: skewX(12deg) translateX(-500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+}
+
+/* aaa */
+.momo-container {
+    margin-top: 38rem;
+    width: 100%; /* Adjust the width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically as well */
+}
+
+.momo {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* ganpati aarti */
+
+.gan-con-1{
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/Images/Aarti/bgaarti.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-top: 9rem;
+    padding-bottom: 19rem;
+}
+.gan-a-1{
+    max-width: 100%;
+    height: auto;
+    color: white;
+}
+
+.gan-a-1 h1{
+    font-size: 4rem;
+}
+.gan-a-1 p{
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* audio */
+.fa-music{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+    color: red;
+    z-index: 1;
+    cursor: pointer;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries for responsiveness */
+/* for 991px */
+@media (max-width:991px){
+    /* html start */
+    html{
+        font-size:55%;
+    }
+    /* html end */
+
+    /* header start */
+    .header{
+        padding: 4.5rem;;
+    }
+    /* header end */
+
+    /* section start */
+    section{
+        padding: 2rem;
+    }
+    /* section end */
+}
+
+/* for 768px */
+@media (max-width:768px){
+    /* menu button start */
+    #menu-btn{
+        display: inline-block;
+    }
+    /* menu button end */
+
+    /* navbar start */
+    .header .navbar{
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: black;
+    }
+
+    .header .navbar ul{
+        flex-direction: column;
+    }
+
+    .navbar ul li:hover {
+        background-color: rgb(168, 163, 163);
+        border-radius: 0.188rem;
+        height: auto;
+        width: 85px;
+    }
+
+    .header .dropdown_aarti ul{
+        flex-direction: inherit;
+        max-height: 100px;
+        overflow-y: auto;
+    }
+    .header .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+    .header .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+    /* navbar end */
+    
+    .home {
+        padding-top: 30rem; 
+        width: auto;
+    }
+
+    .gan{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30rem;
+    }
+
+    .content{
+        margin-top: 60rem;
+        font-size: 2rem;
+    }
+
+    .saiganeshlogo{
+        margin-top:110rem ;
+        right: 2%;
+    }
+
+    .content .saiganeshlogo{
+        animation: none;
+    }
+
+    .about .mamaphoto{
+        margin-top:65rem ;
+        left: 0%;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size:40%;
+    }
+    .home {
+        padding-top: 30%;
+        width: auto;
+     }
+
+    /* .home .saiganeshlogo img{
+        position: relative;
+        width: 200px;
+        height: auto;
+    }
+
+    .home .content{
+        animation: none;
+    }
+    .home .saiganeshlogo{
+        animation: none;
+    } */ 
+
+    .heading{
+        font-size: 2.5rem;
+    }
+}
