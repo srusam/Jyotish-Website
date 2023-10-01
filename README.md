@@ -1,2 +1,3 @@
 # Jyotish-Website
-This website is not a mere project but a real-life application. All the permissions are taken to upload it here. Information like name, phone no. email, address, photos are hidden or replaced with a dummy one for privacy.
+The request on whatsapp feature won't work unless you put a valid number in the code. <br>
+Due to privacy reasons, all such information and images are replaced by a dummy one.
